@@ -215,7 +215,7 @@ int WybiezOpcje_Ustawienia()
 		// jeśli poza zakresem
 		if (wybor < 1 || wybor > 2)
 		{
-			error = "Błąd! Wybierz liczbę od 1 do 4.";
+			error = "Błąd! Wybierz liczbę od 1 do 2.";
 			continue;
 		}
 
