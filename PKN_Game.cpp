@@ -326,45 +326,40 @@ void LogoGry()
 
 void LogoRuchu(int Ruch)
 {
-	switch(Ruch)
-		{
+	switch (Ruch)
+	{
 	case 1: // papier
-			cout << R"(
+		cout << R"(
+                         _______
+====================||---'   ____)____
+                    ||          ______)
+     PAPIER         ||          _______)
+                    ||         _______)
+====================||---.__________))" << endl;
 
-PAPIER
-     _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________))" << endl;
-
-			break;
+		break;
 	case 2: // kamień
-			cout << R"(
-
-KAMIEŃ
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___))" << endl;
-			break;
+		cout << R"(
+                          _______
+====================||---'   ____)
+                    ||      (_____)
+       KAMIEŃ       ||      (_____)
+                    ||      (____)
+====================||---.__(___))" << endl;
+		break;
 	case 3: // nożyce
-			cout << R"(
+		cout << R"(
 
-NOŻYCE
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___))" << endl;
-			break;
+                          _______
+====================||---'   ____)____
+                    ||          ______)
+       NOŻYCE       ||       __________)
+                    ||      (____)
+====================||---.__(___))" << endl;
+		break;
 
-		default:
-			break;
+	default:
+		break;
 	}
 }
 int WalidacjaWygranych()
@@ -477,7 +472,7 @@ void Gra_Poczatek(int liczba_wygranych)
 	bool gra_dziala = true;
 
 	int twoje_wygrane = 0;
-	int komputer_wygrane = 0;	
+	int komputer_wygrane = 0;
 
 	int ruch = 0;
 	int komputer_ruch = 0;
@@ -578,45 +573,45 @@ int main()
 
 		switch (menu_wybor)
 		{
-			case 1:
-				int liczba_wygranych;
-				system("cls");
-				LogoGry();
-				liczba_wygranych = WalidacjaWygranych();
-				Gra_Poczatek(liczba_wygranych);
+		case 1:
+			int liczba_wygranych;
+			system("cls");
+			LogoGry();
+			liczba_wygranych = WalidacjaWygranych();
+			Gra_Poczatek(liczba_wygranych);
 
-				break;
-			case 2:
-				system("cls");
-				Logo();
-				PodTytul();
+			break;
+		case 2:
+			system("cls");
+			Logo();
+			PodTytul();
 
-				Statystyki();
-				break;
-			case 3:
-				system("cls");
-				Logo();
-				PodTytul();
-				
-				ustawienia();
-				UstawieniaFunkcjonalnosc();
+			Statystyki();
+			break;
+		case 3:
+			system("cls");
+			Logo();
+			PodTytul();
 
-				system("cls");
-				cin.get();
+			ustawienia();
+			UstawieniaFunkcjonalnosc();
 
-				break;
+			system("cls");
+			cin.get();
 
-			case 4:
-				system("cls");
-				Logo();
-				PodTytul();
-				Pozegnanie();
+			break;
 
-				dzialanie_gry = false;
-				break;
+		case 4:
+			system("cls");
+			Logo();
+			PodTytul();
+			Pozegnanie();
 
-			default:
-				break;
+			dzialanie_gry = false;
+			break;
+
+		default:
+			break;
 		}
 
 	} //while dzialanie_gry
